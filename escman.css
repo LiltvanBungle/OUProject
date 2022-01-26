@@ -1,0 +1,54 @@
+/* escman CSS */
+.container {
+    padding:1em 16px
+}
+
+.row {
+    content:"";
+    display:table;
+    clear:both
+}
+
+.third {
+    float:left;
+    width: 80px;
+    padding:0 8px
+}
+
+.bottombar {
+    border-bottom:6px solid rgb(10, 23, 201)!important
+}
+
+.hover {
+    font: 15px Arial, sans-serif;
+    font-weight: bold;
+    color:rgb(255, 255, 255)!important;
+    background-color:#8692ff!important}
+
+.padding {padding:8px 16px!important}
+
+.border-col {border-color:#46f436!important;
+    background-color:rgb(10, 23, 201)!important
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #8cd170;
+  }
+
+  h2 {
+    font: 22px Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(10, 23, 201)
+  }

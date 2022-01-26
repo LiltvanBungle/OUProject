@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <head>
+      <style>
+          .title {
+            text-align: center;
+            color: rgb(3, 17, 143);
+          }
+
+        .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        padding: 12px 20px;
+        border: 2px solid rgb(3, 17, 143);
+        /*box-sizing: border-box;*/
+}
+      </style>
+     <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>EscMan: Login</title>
+  </head>
+  <body>
+    <h1 class="title">EscMan Login</h1>
+    <div>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required><br><br>
+        
+            <label for="pwd"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
+                
+            <button type="button" onclick="controller.login()">Login</button><br>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me</input>
+            </label>
+          </div>
+    </div>
+
+  </body>
+</html>

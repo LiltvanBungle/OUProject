@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>EscMan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/escman.css">
+<script src="js/escman.js"></script>
+<body>
+
+<div class="container">
+  <h2>EscMan Escalation Case Handler</h2>
+
+  <div class="row">
+    <a href="javascript:void(0)" onclick="openTab(event, 'New Case');">
+      <div class="third bottombar hover padding tablink">New Case</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openTab(event, 'My Cases');">
+      <div class="third bottombar hover padding tablink">My Cases</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openTab(event, 'Search');">
+      <div class="third bottombar hover padding tablink">Search</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openTab(event, 'Statistics');">
+        <div class="third bottombar hover padding tablink">Statistics</div>
+    </a>
+  </div>
+
+  <div id="New Case" class="container tab" style="display:none">
+    <h2>New Case</h2>
+    <label for="customer_name">Customer</label><br>
+    <input type="text" id="customer_name" name="customer_name"><br><br>
+    <label for="case_title">Case title</label><br>
+    <input type="text" id="case_title" name="case_title"><br><br>
+    <label for="CRMID">CRM ID</label><br>
+    <input type="text" id="CRMID" name="CRMID"><br><br>
+    <label for="assigned">Assigned to</label><br>
+    <input type="text" id="assigned" name="assigned"><br><br>
+    <label for="note">Note</label><br>
+    <textarea name="note" id="note" cols="30" rows="10"></textarea><br><br>
+    <button type="button" onclick=controller.newCase()>Create Case</button>
+    
+    
+  </div>
+
+  <div id="My Cases" class="container tab" style="display:none">
+    <h2>My Cases</h2>
+    <table>
+        <tr>
+          <th>Customer Name</th>
+          <th>CRM ID</th>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Jason Meaney</td>
+          <td>619771</td>
+          <td>Refund Denied - complaint</td>
+          <td>2021-09-21 19:17</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>Louise Thompson</td>
+          <td>619650</td>
+          <td>Refund authorise >£100</td>
+          <td>2021-09-21 16:22</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>Alfonso Riaz</td>
+          <td>619559</td>
+          <td>Misinformation complaint</td>
+          <td>2021-09-21 13:01</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>Raj Masood</td>
+          <td>619481</td>
+          <td>Incorrect purchase correction</td>
+          <td>2021-09-21 11:48</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>Leticia Briars</td>
+          <td>619250</td>
+          <td>Station worker complaint</td>
+          <td>2021-09-21 09:39</td>
+          <td>Awaiting Customer Contact</td>
+        </tr>
+        <tr>
+          <td>Gianni Matriani</td>
+          <td>618711</td>
+          <td>Ongoing complaint regarding fees</td>
+          <td>2021-09-19 13:52</td>
+          <td>Awaiting Customer Contact</td>
+        </tr>
+      </table>
+  </div>
+
+  <div id="Search" class="container tab" style="display:none">
+    <h2>Search</h2>
+    <label for="customer_name_src">Customer Name</label><br>
+    <input type="text" id="customer_name_src" name="customer_name_src"><br>
+    <button type="button" onclick=controller.srcCustName()>Search</button><br><br>
+    <label for="crmid_src">CRM ID</label><br>
+    <input type="text" id="crmid_src" name="crmid_src"><br>
+    <button type="button" onclick=controller.srcCrmid()>Search</button><br><br>
+  </div>
+
+  <div id="Statistics" class="container tab" style="display:none">
+    <h2>Statistics</h2>
+    <p>Statistics for case handling will be shown Here</p>
+  </div>
+</div>
+
+
+</body>
+</html>
